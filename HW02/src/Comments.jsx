@@ -2,7 +2,7 @@ import { useState } from "react";
 
 function Comments({ commentsList }) {
   // Destructure commentsList from props
-  const [comments, setComments] = useState(commentsList);
+  const [comments, setComments] = useState([...commentsList]);
 
   const deleteComment = (id) => {
     setComments(comments.filter((comment) => comment.id !== id));
